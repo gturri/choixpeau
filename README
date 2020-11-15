@@ -1,0 +1,10 @@
+Non generic project you are probably not interested in.
+
+To install it:
+
+- Put the files on a PHP server
+- Edit config.php in order to put the values you want
+- Browse the page check_conf.php to ensure your conf is valid
+
+To use it:
+- Browse the page index.php
