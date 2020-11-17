@@ -36,3 +36,7 @@
 .small_col {
   flex: 10%;
 }
+
+.hide {
+  display: none;
+}

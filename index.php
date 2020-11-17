@@ -3,6 +3,7 @@
   <title>Choixpeau</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -12,21 +13,23 @@
 <div id="talkbubble" class="col">
 <?php
 require_once "lib.php";
-$eleve = $_REQUEST["eleve"];
+$eleve = @$_REQUEST["eleve"];
+$displayed_eleve = false;
 if (isset($eleve)) {
-	echo "<div>";
 	if (is_known_eleve($eleve)) {
 		$maison = get_maison_for_eleve($eleve);
 		$phrase = get_randomly_one_phrase_for_maison($maison);
-		echo "$eleve $phrase. Je t'assigne à $maison";
+		echo "<div id=\"first\">$eleve $phrase</div>";
+		echo "<div id=\"second\" class=\"hide\">Je t'assigne à ...</div>";
+		echo "<div id=\"third\" class=\"hide\">$maison</div>";
+		$displayed_eleve = true;
 	} else {
-		echo get_error_msg();
+		echo "<div>" . get_error_msg() . "</div>";
 	}
-	echo "</div>";
 }
 ?>
   
-  <div>Qui veux-tu que j'évalue maintenant ?</div>
+  <div id="last" <?php if ($displayed_eleve){echo "class=\"hide\"";} ?>>Qui veux-tu que j'évalue maintenant ?</div>
 </div>
 </div>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
