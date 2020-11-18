@@ -1,5 +1,4 @@
 #talkbubble {
- width: 200px;
  position: relative;
  -moz-border-radius: 10px;
  -webkit-border-radius: 10px;
@@ -21,13 +20,13 @@
 }
 
 #choixpeau {
-  height: 200px;
   float: left;
 }
 
 #outter {
   display: flex;
-  width: 400px;
+  width: 800px;
+  font-size: large;
 }
 
 .col {
