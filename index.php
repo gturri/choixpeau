@@ -19,9 +19,9 @@ if (isset($eleve)) {
 	if (is_known_eleve($eleve)) {
 		$maison = get_maison_for_eleve($eleve);
 		$phrase = get_randomly_one_phrase_for_maison($maison);
-		echo "<div id=\"first\">$eleve $phrase</div>";
-		echo "<div id=\"second\" class=\"hide\">Je t'assigne à ...</div>";
-		echo "<div id=\"third\" class=\"hide\">$maison</div>";
+		echo "<div id=\"talk_1\">$eleve $phrase</div>";
+		echo "<div id=\"talk_2\" class=\"hide\">Je t'assigne à ...</div>";
+		echo "<div id=\"talk_3\" class=\"hide\">$maison</div>";
 		$displayed_eleve = true;
 	} else {
 		echo "<div>" . get_error_msg() . "</div>";
@@ -29,14 +29,13 @@ if (isset($eleve)) {
 }
 ?>
   
-  <div id="last" <?php if ($displayed_eleve){echo "class=\"hide\"";} ?>>Qui veux-tu que j'évalue maintenant ?</div>
+  <div id="talk_4" <?php if ($displayed_eleve){echo "class=\"hide\"";} ?>>Qui veux-tu que j'évalue maintenant ?</div>
 </div>
 </div>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	<input type="text" name="eleve">
   <input type="submit" value="go">
 </form>
-
 
 </body>
 </html>
