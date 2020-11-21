@@ -7,4 +7,5 @@ To install it:
 - Browse the page check_conf.php to ensure your conf is valid
 
 To use it:
-- Browse the page index.php
+- Browse the page intro.php to get the talked introduction from the choixpeau
+  or go directly to index.php if you want to skip it
