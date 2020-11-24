@@ -34,7 +34,7 @@ if (isset($eleve)) {
 </div>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	<input type="text" name="eleve">
-  <input type="submit" value="go">
+  <input type="submit" value="Nom de l'élève">
 </form>
 
 </body>
