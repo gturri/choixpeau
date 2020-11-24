@@ -44,3 +44,76 @@
 #talk_3 {
   font-size: xxx-large;
 }
+
+
+/* Adapted from http://www.lucedigitale.com/blog/css-tips-and-tricks-great-looking-oval-speech-bubble/ */
+.wrapper-baloons {
+  padding: 4em;
+  width: 25em;
+}
+/* OVAL STYLE 1 SPEECH START */
+.oval-speech-1 {
+   position:relative;
+   width:15em;
+   padding:2em 2em;
+   margin:1em auto 4em;
+   text-align:center;
+   color:#000;
+   background:#fff;
+   border-radius: 10px;
+   border-color: black;
+   border: solid;
+   -webkit-border-top-left-radius:22em 12em;
+   -webkit-border-top-right-radius:22em 12em;
+   -webkit-border-bottom-right-radius:22em 12em;
+   -webkit-border-bottom-left-radius:22em 12em;
+   -moz-border-radius:22em / 12em;
+   border-radius:22em / 12em;
+}
+.oval-speech-1 p {
+  font-size:1.25em;
+}
+
+/* creates first part of the pipe */
+.oval-speech-1:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-1.8em;
+  right:50%;
+  height:3em;
+  border-right:3em solid #000;
+  background:#fff; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:4em 2em;
+  -moz-border-radius-bottomright:4em 2em;
+  border-bottom-right-radius:4em 2em;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(0, -0.2em);
+  -moz-transform:translate(0, -0.2em);
+  -ms-transform:translate(0, -0.2em);
+  -o-transform:translate(0, -0.2em);
+  transform:translate(0, -0.2em);
+}
+/* creates second part of the pipe */
+.oval-speech-1:after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-1.9em;
+  right:46%;
+  width:3em;
+  height:3em;
+  background:#fff;
+  /* css3 */
+  -webkit-border-bottom-right-radius:2em 2.2em;
+  -moz-border-radius-bottomright:2em 2.2em;
+  border-bottom-right-radius:2em 2.2em;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(-3em, -0.2em);
+  -moz-transform:translate(-2em, -0.2em);
+  -ms-transform:translate(-2em, -0.2em);
+  -o-transform:translate(-2em, -0.2em);
+  transform:translate(-2em, -0.2em);
+}
+/* OVAL STYLE 1 SPEECH END */

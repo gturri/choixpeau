@@ -10,26 +10,31 @@
 <div id="outter">
 <img id="choixpeau" class="col" src="choixpeau.jpg" alt="choixpeau" />
 <div class="small_col"></div>
-<div id="talkbubble" class="col">
+<div id="wrapper-baloons" class="col">
 <?php
 require_once "lib.php";
+function displayBalloon($content, $id="", $class="") {
+  $classHtml = "class=\"oval-speech-1 $class\"";
+  $idHtml = ($id != "" ? "id=\"$id\"" : "");
+  return "<blockquote $idHtml $classHtml><p>$content</p></blockquote>";
+}
 $eleve = @$_REQUEST["eleve"];
 $displayed_eleve = false;
 if (isset($eleve)) {
 	if (is_known_eleve($eleve)) {
 		$maison = get_maison_for_eleve($eleve);
 		$phrase = get_randomly_one_phrase_for_maison($maison);
-		echo "<div id=\"talk_1\">$eleve $phrase</div>";
-		echo "<div id=\"talk_2\" class=\"hide\">Je t'assigne à ...</div>";
-		echo "<div id=\"talk_3\" class=\"hide\">$maison</div>";
+        echo displayBalloon("$eleve $phrase", "talk_1");
+        echo displayBalloon("Je t'assigne à ...", "talk_2", "hide");
+        echo displayBalloon($maison, "talk_3", "hide");
 		$displayed_eleve = true;
 	} else {
-		echo "<div>" . get_error_msg() . "</div>";
+        echo displayBalloon(get_error_msg());
 	}
 }
+$classFinalBalloon = ($displayed_eleve ? "hide" : "");
+echo displayBalloon("Qui veut-tu que j'évalue maintenant ?", "talk_4", $classFinalBalloon);
 ?>
-  
-  <div id="talk_4" <?php if ($displayed_eleve){echo "class=\"hide\"";} ?>>Qui veux-tu que j'évalue maintenant ?</div>
 </div>
 </div>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
