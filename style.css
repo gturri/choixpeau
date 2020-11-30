@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'magikregular';
+    src: url('font/magik-webfont.woff2') format('woff2'),
+         url('font/magik-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'magikregular';
+}
+
 #talkbubble {
  position: relative;
  -moz-border-radius: 10px;
@@ -21,12 +33,12 @@
 
 #choixpeau {
   float: left;
-  width: 400px;
+  width: 780px;
 }
 
 #outter {
   display: flex;
-  width: 800px;
+  width: 1180px;
   font-size: large;
 }
 
