@@ -8,7 +8,7 @@
 <body>
 
 <div id="outter">
-<img id="choixpeau" class="col" src="choixpeau.jpg" alt="choixpeau" />
+<img id="choixpeau" class="col" src="choixpeau2.png" alt="choixpeau" />
 <div class="small_col"></div>
 <div id="talkbubble" class="col">
 <?php

@@ -25,6 +25,6 @@ function choixpeauClicked(){
 
 <audio onEnded="window.audioIsBeingPlayed=false;" id="audio_poeme" src="poeme.m4a">Your browser does not support the audio element</audio>
 <audio onEnded="window.location.href='index.php'" id="audio_bravo" src="bravo.m4a">Your browser does not support the audio element</audio>
-<img style="cursor:pointer;" onClick="choixpeauClicked();" id="choixpeau" class="col" src="choixpeau.jpg" alt="choixpeau" />
+<img style="cursor:pointer;" onClick="choixpeauClicked();" id="choixpeau" class="col" src="choixpeau2.png" alt="choixpeau" />
 
 
