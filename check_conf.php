@@ -17,12 +17,28 @@ if (!array_key_exists("maisons", $conf)) {
   close_and_exit();
 }
 
+// Check the blasons are correctly defined
+$has_error = false;
+if (!array_key_exists("blason", $conf)) {
+  echo "La liste des blasons n'est pas définie.";
+  close_and_exit();
+}
+
+foreach($conf["maisons"] as $maison){
+  if (!array_key_exists($maison, $conf["blason"])){
+    echo "la maison $maison n'a pas de blason<br>";
+    $has_error = true;
+  } else if (!file_exists($conf["blason"][$maison])) {
+     echo "le fichier " . $conf["blason"][$maison] . " n'a pas l'air d'exister<br>";
+     $has_error = true;
+  }
+}
+
 // Check each maison has a list of eleves (even if the list is empty)
 if (!array_key_exists("eleves", $conf)) {
   echo "Les listes d'élèves ne sont pas définies.";
   close_and_exit();
 }
-$has_error = false;
 foreach ($conf["maisons"] as $maison){
 	if (!array_key_exists($maison, $conf["eleves"])){
 		echo "la maison $maison n'a pas de liste d'élèves.<br>";
@@ -116,6 +132,15 @@ if (!array_key_exists("msg_erreur", $conf)) {
 		}
 		echo "</ul>";
 	}
+?>
+</ul>
+
+<h1>Liste des blasons</h1>
+<ul>
+<?php
+  foreach(get_maisons() as $maison){
+    echo "<li>$maison : <img src=" . $conf["blason"][$maison] . " /></li>";
+  }
 ?>
 </ul>
 
