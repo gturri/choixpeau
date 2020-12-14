@@ -56,3 +56,14 @@ body {
 #talk_3 {
   font-size: xxx-large;
 }
+
+.img_intro {
+  width: 900px;
+  cursor:pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
