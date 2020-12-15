@@ -32,7 +32,6 @@ body {
 }
 
 #choixpeau {
-  float: left;
   width: 780px;
 }
 
@@ -66,4 +65,11 @@ body {
 
 .block {
   display: block;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
