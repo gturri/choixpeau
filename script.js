@@ -20,8 +20,8 @@ function displayNextId(){
 }
 
 function transitionBetweenImages(idImgToHide, idImgToDisplay){
-  document.getElementById(idImgToHide).classList.add('hide');
-  document.getElementById(idImgToDisplay).classList.remove('hide');
+  document.getElementById(idImgToHide).classList.add('transparent');
+  document.getElementById(idImgToDisplay).classList.remove('transparent');
 }
 
 window.addEventListener("keyup", function(event){

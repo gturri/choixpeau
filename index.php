@@ -18,7 +18,7 @@ $eleve = @$_REQUEST["eleve"];
     <?php
     if (isset($eleve)) {
         $maison = get_maison_for_eleve($eleve);
-        echo '<img id="blason" class="superpose hide" src="' . get_blason_for_maison($maison) . '" alt="blason" />';
+        echo '<img id="blason" class="superpose transparent" src="' . get_blason_for_maison($maison) . '" alt="blason" />';
     }
     ?>
   </div>
