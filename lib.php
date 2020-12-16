@@ -41,6 +41,11 @@ function get_randomly_one_phrase_for_maison($maison){
 	return $all_phrases[$idx];
 }
 
+function get_blason_for_maison($maison){
+	require "config.php";
+	return $conf["blason"][$maison];
+}
+
 function get_error_msg(){
 	require "config.php";
 	return $conf['msg_erreur'];

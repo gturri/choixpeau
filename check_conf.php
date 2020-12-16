@@ -139,7 +139,7 @@ if (!array_key_exists("msg_erreur", $conf)) {
 <ul>
 <?php
   foreach(get_maisons() as $maison){
-    echo "<li>$maison : <img src=" . $conf["blason"][$maison] . " /></li>";
+    echo "<li>$maison : <img src=" . get_blason_for_maison($maison) . " /></li>";
   }
 ?>
 </ul>
