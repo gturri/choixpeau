@@ -38,4 +38,5 @@ function next(idCurrent, idNext){
 <audio onEnded="window.audioIsBeingPlayed=false;" id="audio_poeme" src="poeme.m4a">Your browser does not support the audio element</audio>
 <audio onEnded="window.location.href='index.php'" id="audio_bravo" src="bravo.m4a">Your browser does not support the audio element</audio>
 
-
+</body>
+</html>
