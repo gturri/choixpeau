@@ -8,6 +8,8 @@
 
 body {
   font-family: 'magikregular';
+  background-image: url("stonewall.jpg");
+  background-repeat: repeat;
 }
 
 #talkbubble {
@@ -17,6 +19,7 @@ body {
  border-radius: 10px;
  border-color: black;
  border: solid;
+ background-color: white;
 }
 
 #talkbubble:before {
