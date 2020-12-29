@@ -14,7 +14,7 @@ $eleve = @$_REQUEST["eleve"];
 <div id="outter" class="centered">
 <div class="col">
   <div id="cadre">
-    <img id="choixpeau" class="superpose" src="choixpeau2.png" alt="choixpeau" />
+    <img id="choixpeau" class="superpose" src="choixpeau.jpg" alt="choixpeau" />
     <?php
     if (isset($eleve)) {
         $maison = get_maison_for_eleve($eleve);
