@@ -9,7 +9,7 @@
 
 <?php
 require_once "lib.php";
-$eleve = strtolower(@$_REQUEST["eleve"]);
+$eleve = trim(strtolower(@$_REQUEST["eleve"]));
 ?>
  <div id="cadre" class="centered">
   <img class="superpose" id="choixpeau" src="choixpeau.jpg" alt="choixpeau" />
@@ -20,7 +20,7 @@ $eleve = strtolower(@$_REQUEST["eleve"]);
     }
     ?>
  </div>
-  <form class="centered block" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+  <form class="centered block" method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input class="centered block"  type="text" name="eleve">
     <input class="centered block"  type="submit" value="Nom de l'élève">
   </form>
