@@ -5,7 +5,7 @@ function sleep(ms) {
 async function displayBlason() {
   console.log("displaying blason");
   document.getElementById('blason').classList.remove('hide');
-  await sleep(1);
+  await sleep(10);
   transitionBetweenImages("choixpeau", "blason");
 }
 
