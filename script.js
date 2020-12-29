@@ -30,8 +30,8 @@ function transitionBetweenImages(idImgToHide, idImgToDisplay){
 }
 
 window.addEventListener("keyup", function(event){
-  if (event.keyCode === 71) { // "g"
-    console.log("'g' has been pressed");
+  if (event.keyCode === 90) { // "z"
+    console.log("'z' has been pressed");
     document.getElementById("audio_garcon").play();
   } else if (event.keyCode === 70) { // "f"
     console.log("'f' has been pressed");
