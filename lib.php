@@ -57,7 +57,7 @@ function get_first_name($name){
 }
 
 function html_audio($src, $id, $onEnded="", $autoplay=false){
-	$result = "<audio id=\"$id\" onEnded=\"$onEnded\" src=\"$src\"";
+	$result = "<audio id=\"$id\" onEnded=\"$onEnded choixpeauStopsTalking();\" onPlay=\"choixpeauStartsTalking();\" src=\"$src\"";
 	if ($autoplay) {
 		$result .= " autoplay";
 	}

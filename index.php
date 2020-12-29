@@ -25,10 +25,10 @@ $eleve = strtolower(@$_REQUEST["eleve"]);
     <input class="centered block"  type="submit" value="Nom de l'élève">
   </form>
 
-  <audio id="audio_garcon" src="audio/bonjour_garcon.m4a">Your browser does not support the audio element</audio>
-  <audio id="audio_fille" src="audio/bonjour_fille.m4a">Your browser does not support the audio element</audio>
-
 <?php
+  echo html_audio("audio/bonjour_garcon.m4a", "audio_garcon");
+  echo html_audio("audio/bonjour_fille.m4a", "audio_fille");
+
   if ($eleve !== ""){
     if (is_known_eleve($eleve)){
       echo html_audio("audio/prenoms/" . get_first_name($eleve) . ".m4a", "prenom", "document.getElementById('audio_observer').play();", true);

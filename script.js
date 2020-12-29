@@ -35,6 +35,14 @@ async function hideBlason() {
   document.getElementById('blason').classList.add('hide');
 }
 
+function choixpeauStartsTalking() {
+  document.getElementById("choixpeau").src = "choixpeau_parlant.gif";
+}
+
+function choixpeauStopsTalking() {
+  document.getElementById("choixpeau").src = "choixpeau.jpg";
+}
+
 function transitionBetweenImages(idImgToHide, idImgToDisplay){
   document.getElementById(idImgToHide).classList.add('transparent');
   document.getElementById(idImgToDisplay).classList.remove('transparent');
