@@ -44,8 +44,8 @@ function next(idCurrent, idNext){
 <img class="img_intro hide" onClick="next('localisation', 'choixpeau_intro');" id="localisation" src="localisation_choixpeau.png" alt="localisation choixpeau" />
 
 <img class="img_intro hide" onClick="choixpeauClicked();" id="choixpeau_intro" src="choixpeau.jpg" alt="choixpeau" />
-<audio onEnded="choixpeauStopsTalking(); window.audioIsBeingPlayed=false;" id="audio_poeme" src="poeme.m4a">Your browser does not support the audio element</audio>
-<audio onEnded="choixpeauStopsTalking(); window.location.href='index.php'" id="audio_bravo" src="bravo.m4a">Your browser does not support the audio element</audio>
+<audio onEnded="choixpeauStopsTalking(); window.audioIsBeingPlayed=false;" id="audio_poeme" src="audio/intro_poeme.m4a">Your browser does not support the audio element</audio>
+<audio onEnded="choixpeauStopsTalking(); window.location.href='index.php'" id="audio_bravo" src="audio/bravo.m4a">Your browser does not support the audio element</audio>
 
 </body>
 </html>
