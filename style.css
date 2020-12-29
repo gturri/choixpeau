@@ -1,51 +1,8 @@
-@font-face {
-    font-family: 'magikregular';
-    src: url('font/magik-webfont.woff2') format('woff2'),
-         url('font/magik-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-  font-family: 'magikregular';
   background-image: url("stonewall.jpg");
   background-repeat: repeat;
 }
 
-#talkbubble {
- position: relative;
- -moz-border-radius: 10px;
- -webkit-border-radius: 10px;
- border-radius: 10px;
- border-color: black;
- border: solid;
- background-color: white;
-}
-
-#talkbubble:before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 26px;
-  width: 0;
-  height: 0;
-  border-top: 13px solid transparent;
-  border-right: 26px solid black;
-  border-bottom: 13px solid transparent;
-}
-
-#outter {
-  display: flex;
-  width: 1180px;
-  font-size: large;
-}
-
-.col {
-  flex: 45%;
-}
-.small_col {
-  flex: 10%;
-}
 #cadre {
   position: relative;
   width: 780px;
@@ -69,12 +26,8 @@ body {
   display: none;
 }
 
-#talk_3 {
-  font-size: xxx-large;
-}
-
 .img_intro {
-  width: 800px;
+  width: 780px;
   cursor:pointer;
   margin-left: auto;
   margin-right: auto;
@@ -88,5 +41,4 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }

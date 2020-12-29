@@ -3,6 +3,7 @@
   <title>Choixpeau</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <script>
 var alreadyPlayedPoem = false;
 var audioIsBeingPlayed = false;
@@ -20,14 +21,6 @@ function choixpeauClicked(){
   }
 }
 
-function choixpeauStartsTalking() {
-  document.getElementById("choixpeau_intro").src = "choixpeau_parlant.gif";
-}
-
-function choixpeauStopsTalking() {
-  document.getElementById("choixpeau_intro").src = "choixpeau.jpg";
-}
-
 function next(idCurrent, idNext){
   document.getElementById(idCurrent).classList.add('hide');
   document.getElementById(idCurrent).classList.remove('block');
@@ -41,9 +34,9 @@ function next(idCurrent, idNext){
 
 <img class="img_intro block" onClick="next('chateau', 'salle');" id="chateau" src="chateau.png" alt="chateau.png" />
 <img class="img_intro hide" onClick="next('salle', 'localisation');" id="salle" src="salle_principale.png" alt="salle principale" />
-<img class="img_intro hide" onClick="next('localisation', 'choixpeau_intro');" id="localisation" src="localisation_choixpeau.png" alt="localisation choixpeau" />
+<img class="img_intro hide" onClick="next('localisation', 'choixpeau');" id="localisation" src="localisation_choixpeau.png" alt="localisation choixpeau" />
 
-<img class="img_intro hide" onClick="choixpeauClicked();" id="choixpeau_intro" src="choixpeau.jpg" alt="choixpeau" />
+<img class="img_intro hide" onClick="choixpeauClicked();" id="choixpeau" src="choixpeau.jpg" alt="choixpeau" />
 <audio onEnded="choixpeauStopsTalking(); window.audioIsBeingPlayed=false;" id="audio_poeme" src="audio/intro_poeme.m4a">Your browser does not support the audio element</audio>
 <audio onEnded="choixpeauStopsTalking(); window.location.href='index.php'" id="audio_bravo" src="audio/bravo.m4a">Your browser does not support the audio element</audio>
 
