@@ -50,3 +50,17 @@ function get_error_msg(){
 	require "config.php";
 	return $conf['msg_erreur'];
 }
+
+function get_first_name($name){
+	$array = explode(' ', $name);
+	return $array[0];
+}
+
+function html_audio($src, $id, $onEnded="", $autoplay=false){
+	$result = "<audio id=\"$id\" onEnded=\"$onEnded\" src=\"$src\"";
+	if ($autoplay) {
+		$result .= " autoplay";
+	}
+	$result .= ">Your browser does not support the audioElement</audio>";
+	return $result;
+}

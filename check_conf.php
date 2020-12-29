@@ -71,36 +71,6 @@ if ($has_error){
 	close_and_exit();
 }
 
-// Check each maison has phrases
-if (!array_key_exists("phrases", $conf)) {
-  echo "Les listes de phrases du choixpeau ne sont pas définies.";
-  close_and_exit();
-}
-$has_error = false;
-foreach ($conf["maisons"] as $maison){
-	if (!array_key_exists($maison, $conf["phrases"])){
-		echo "la maison $maison n'a pas de liste de phrase.<br>";
-		$has_error = true;
-	}
-}
-
-// Check no phrases is associated to a non existant maison
-foreach ($conf["phrases"] as $maison => $phrases){
-	if (!in_array($maison, $conf["maisons"])){
-		echo "Il y a une liste de phrases pour la maison $maison mais celle-ci n'existe pas.<br>";
-		$has_error = true;
-	}
-}
-if ($has_error){
-	close_and_exit();
-}
-
-// Check the error msg is correctly defined
-if (!array_key_exists("msg_erreur", $conf)) {
-  echo "La message d'erreur (en cas de nom d'élève non reconnu) n'est pas défini (clé 'msg_erreur').";
-  close_and_exit();
-}
-
 ?>
 <div>Aucune erreur constatée, le fichier de conf a l'air correct</div>
 
@@ -122,19 +92,6 @@ if (!array_key_exists("msg_erreur", $conf)) {
 ?>
 </ul>
 
-<h1>Liste des phrases</h1>
-<ul>
-<?php
-	foreach(get_maisons() as $maison){
-		echo "<li>$maison</li><ul>";
-		foreach (get_phrases_for_maison($maison) as $phrase){
-			echo "<li>$phrase</li>";
-		}
-		echo "</ul>";
-	}
-?>
-</ul>
-
 <h1>Liste des blasons</h1>
 <ul>
 <?php
@@ -143,11 +100,6 @@ if (!array_key_exists("msg_erreur", $conf)) {
   }
 ?>
 </ul>
-
-<h1>Message d'erreur</h1>
-<?php
-  echo get_error_msg();
-?>
 
 <?php
 close_and_exit();
