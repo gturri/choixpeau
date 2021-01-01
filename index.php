@@ -31,8 +31,14 @@ $eleve = trim(strtolower(@$_REQUEST["eleve"]));
 
   if ($eleve !== ""){
     if (is_known_eleve($eleve)){
-      echo html_audio("audio/prenoms/" . get_first_name($eleve) . ".m4a", "prenom", "document.getElementById('audio_observer').play();", true);
-      echo html_audio("audio/laisse_moi_tobserver.m4a", "audio_observer", "document.getElementById('audio_carac').play();");
+      $useLaisseMoiTObserver = rand(1, 4) == 1;
+      echo "\n<!--useLaisseMoiTObserver: $useLaisseMoiTObserver-->\n";
+      if ($useLaisseMoiTObserver) {
+        echo html_audio("audio/prenoms/" . get_first_name($eleve) . ".m4a", "prenom", "document.getElementById('audio_observer').play();", true);
+        echo html_audio("audio/laisse_moi_tobserver.m4a", "audio_observer", "document.getElementById('audio_carac').play();");
+      } else {
+        echo html_audio("audio/prenoms/" . get_first_name($eleve) . ".m4a", "prenom", "document.getElementById('audio_carac').play();", true);
+      }
       echo html_audio("audio/caracs/carac_" . str_replace(' ', '_', $eleve) . ".m4a", "audio_carac", "document.getElementById('audio_assignation').play();");
       echo html_audio("audio/je_tassigne_a.m4a", "audio_assignation", "displayBlason(); document.getElementById('audio_blason').play();");
       echo html_audio("audio/blasons/" . $maison . ".m4a", "audio_blason", "hideBlason();");
