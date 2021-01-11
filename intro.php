@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Choixpeau</title>
@@ -40,5 +41,6 @@ function next(idCurrent, idNext){
 <audio onEnded="choixpeauStopsTalking(); window.audioIsBeingPlayed=false;" id="audio_poeme" src="audio/intro_poeme.m4a">Your browser does not support the audio element</audio>
 <audio onEnded="choixpeauStopsTalking(); window.location.href='index.php'" id="audio_bravo" src="audio/bravo.m4a">Your browser does not support the audio element</audio>
 
+<audio id="prologue" src="audio/prologue.mp3" autoplay loop></audio>
 </body>
 </html>
