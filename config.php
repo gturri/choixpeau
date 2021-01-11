@@ -20,6 +20,7 @@ $conf["eleves"]["serpentard"] = array(
 	, "lilouann"
 	, "max"
     , "arthur p"
+    , "samuel"
 );
 $conf["eleves"]["gryffondor"] = array(
     "arthur m"

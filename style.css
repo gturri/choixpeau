@@ -1,6 +1,9 @@
 body {
-  background-image: url("stonewall.jpg");
-  background-repeat: repeat;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #cadre {
