@@ -16,28 +16,28 @@ $conf["blason"]["serdaigle"] = "serdaigle.png";
 
 // Saisir la liste des élèves par maison
 $conf["eleves"]["serpentard"] = array(
-	"nilo"
-	, "lilouann"
-	, "max"
-    , "arthur p"
-    , "samuel"
+	"elliott"
+	, "pablo"
+	, "mya"
+    , "arthur m"
+    , "matthieu"
 );
 $conf["eleves"]["gryffondor"] = array(
-    "arthur m"
-    , "jean"
-    , "sven"
-    , "gaspard"
+    "arthur p"
+    , "mathieu"
+    , "nilo"
+    , "eloween"
 );
 $conf["eleves"]["serdaigle"] = array(
-    "matis"
-    , "mya"
-    , "mathieu"
-    , "pablo"
+    "samuel"
+    , "simon"
+    , "lilouann"
+    , "sven"
 );
 $conf["eleves"]["poufsouffle"] = array(
-    "simon"
-    , "elliott"
-    , "matthieu"
-    , "elowenn"
+    "jean"
+    , "max"
+    , "matis"
+    , "gaspard"
 );
 
